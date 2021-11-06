@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT || 8000;
 
 
 const viewsPath = (path.join(__dirname , "/Templates/views"))
@@ -25,6 +26,6 @@ app.get("*", (req, res)=>{
     res.send("404 Error Through Us")
 })
 
-app.listen(8000, ()=>{
+app.listen(port , ()=>{
     console.log("It is Going well...")
 })
