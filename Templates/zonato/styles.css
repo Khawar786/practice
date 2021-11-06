@@ -1,0 +1,943 @@
+:root {
+    --main: #1dbf73;
+    --secondary: #674CC4;
+    /* #674CC4 : hostinger theme color*/
+    /* #1dbf73 : fiverr theme color*/
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size : 62.5%;
+}
+
+
+body{
+    overflow-x: hidden;
+    transition: 0.5s ease;
+}
+.darkpanel{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.562);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+/*scrollbar design*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--secondary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, white,var(--secondary),var(--main), white);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      border-top: 0.2rem solid white;
+      border-bottom: 0.2rem solid white;
+    background: linear-gradient(45deg, var(--main),var(--secondary));
+  }
+/*scrollbar design end*/
+/* main head starts */
+.head{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0, 0, 0.4)url(buildings.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+    
+}
+
+/*navbar in head start*/
+.turngreen{
+
+    color: white!important;
+}
+.changenav{
+    background: linear-gradient(45deg, var(--main) , var(--secondary) )!important;
+}
+.changelogo{
+    color: var(--secondary)!important;
+    font-size: 7rem!important;
+}
+.navbar{
+    position: sticky ;
+    top: 0;
+    padding: 1rem 1rem;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    line-height: 4rem ;
+    margin-bottom: -7rem;
+    transition: 0.5s ease;
+   z-index: 1;
+}
+
+.logo{
+    font-size: 5rem;
+    color: var(--main);
+    -webkit-animation: logoanimation 1s normal ease-in-out both;
+    animation: logoanimation 0.5s normal ease-in-out both;
+    transition: 0.5s ease-in-out;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar li{
+    cursor: pointer;
+    padding:0 1rem;
+    border-radius: 2rem;
+}
+.navbar ul a{
+    font-size: 2rem;
+   text-decoration: none;
+    color: var(--main);
+   transition: 0.5s ease-in-out;
+}
+.navbar ul li a:hover {
+  color: var(--main);
+}
+.navbar ul li a :hover li{
+    border-top: 0.2rem solid var(--main);
+        border-bottom:0.2rem solid var(--main);
+    color: var(--main)
+}
+.navbar ul li:hover {
+    border-top: 0.2rem solid var(--main);
+        border-bottom:0.2rem solid var(--main);
+
+
+    color: var(--main);
+    
+}
+.navbar ul li:hover a{
+    color: var(--main)
+}
+
+/*navbar in head ends*/
+.autowrite{
+    text-align: center;
+    height:80%;
+    width: 100%;
+    font-size: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.autowrite p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 80%;
+    text-align: center;
+
+}
+.type1, .type2{
+   color: var(--main)
+}
+
+.bodymain{
+    height: 100vh;
+}
+.call{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderbtn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    padding: 2rem;
+    width: auto;
+    font-size: 2rem;
+    color:white;
+    background-color: var(--main);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-top: -40rem;
+    -webkit-animation: comefromdown 1s normal ease-in-out both;
+    animation: comefromdown 1s normal ease-in-out both;
+    -webkit-animation: transform 0.5s normal ease-in-out both;
+    animation: transform 0.5s normal ease-in-out both;
+}
+.orderbtn:hover{
+    color: var(--main);
+    background-color: white;
+    transform: scale(1.20);
+}
+.godown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.godown i{
+    font-size: 5rem;
+    color: white;
+    -webkit-animation: supdown 1s infinite ease-in-out both;
+    animation: supdown 1s infinite ease-in-out both;
+}
+/*main head ends*/
+
+/*aniamtions start*/
+
+@keyframes logoanimation{
+  0%{
+
+      transform: translateX(-2rem)
+  }
+  100%{
+      transform: translateX(0rem)
+  }
+}
+@-webkit-keyframes supdown {
+    0%{
+
+        transform: translateX(-2rem)
+    }
+    100%{
+        transform: translateX(0rem)
+    }
+}
+
+    
+@keyframes comefromdown{
+    0%{
+  
+        transform: translateY(30rem)
+    }
+    100%{
+        transform: translateY(0rem)
+    }
+  }
+ 
+@-webkit-keyframes supdown {
+    0%{
+        transform: translateY(0rem);
+    }
+    10%{
+        transform: translateY(0rem);
+    }
+    20%{
+        transform: translateY(0rem);
+    }
+    30%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(4rem);
+    }
+    
+    100%{
+        transform: translateY(0rem);
+    }
+  }
+
+ @keyframes supdown {
+    0%{
+        transform: translateY(0rem);    }
+    10%{
+        transform: translateY(0rem);
+    }
+    20%{
+        transform: translateY(0rem);
+    }
+    30%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(4rem);    }
+    
+    100%{
+        transform: translateY(0rem);    }
+  }
+
+  /*animations end*/
+  
+
+    /*why us starts*/
+    .whyus{
+        width: 99vw;
+        height: auto ;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .parts{
+        width: 95.5%;
+        height: auto;
+    }
+    .parts{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+        padding: 0 4rem ;
+    }
+    .box{
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        background: linear-gradient(45deg, var(--secondary),var(--main));
+    }
+    .box i{
+        font-size: 5rem;
+        color: var(--secondary);
+        margin: 1rem;
+    }
+    .box h1{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .box p{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+
+
+
+/* how to it work start*/
+
+.third{
+    overflow: hidden;
+    margin-top: 2rem;
+    height: auto;
+    padding: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}          
+
+.mainhead{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 97%;
+    font-size: 2.5rem;
+    text-align: center;
+    height: auto;
+    color: var(--main);
+    text-align: center;
+    margin: 2rem 0 ;
+
+}
+
+      /*upper third*/
+.upper{
+
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.step{
+    cursor: pointer;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.step img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+.step h1{
+    font-size: 2rem;
+    color: var(--main);
+    margin-top: 2rem;
+    transition:all 0.5s ease;
+}
+.step:hover.step img{
+     border: 0.2rem solid var(--main);
+     box-shadow: 0px 0px 1rem 1rem rgba(0, 128, 0, 0.219);
+}
+.step:hover.step h1{
+    transform: scale(1.20);
+}
+
+      /*lower third*/
+.lower{
+    margin: 2rem;
+    width: 99vw;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sec{
+    width: 89.1%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem 6rem ;
+    background: linear-gradient(45deg, var(--main),var(--secondary));
+}
+
+
+
+.pic{
+    height: 100%;
+}
+.sec:nth-child(1) > .pic, .sec:nth-child(3) > .pic, .sec:nth-child(5) > .pic{
+    margin-right: 2rem;
+}
+.sec:nth-child(2) > .pic, .sec:nth-child(4) > .pic{
+    margin-left: 2rem;
+}
+.pic img{
+    height: 100%;
+}
+.info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info h1{
+    font-size: 4rem;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.info .outerbtn{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 0.4s ease;
+}
+.info .outerbtn:hover, .info .outerbtn a:hover > .info .outerbtn{
+    transform: scale(1.10);
+}
+.info .secbtn{
+    padding: 1rem;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    background-color: var(--main);
+    color: white;
+    font-size: 2rem;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.info p{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+.stick{
+    position: fixed;
+    top: 3rem;
+    left: 0rem;
+}
+.nonstick{
+    position: static;
+}
+
+/* fifth starts */
+.fifthouter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: auto;
+}
+.fifth{
+    width: 97%;
+    height: 70rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.bar{
+    width: 5vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--secondary),var(--main));
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.bar h1{
+    font-size: 2.5rem;
+    color: white;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+} 
+.slider{
+    height: 100%;
+    width: calc(100% - 25vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 4rem;
+    background:  linear-gradient(45deg, var(--secondary),var(--main));
+}
+
+.slider h1{
+    color: var(--secondary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.slider p{
+    text-align: center;
+      font-size: 2.5rem;
+}
+.slider p a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+.slider .under{
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.under1 .source{
+    background: url(googleplanner.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.under2 .source{
+    background: url(writing.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+
+.under3 .source{
+    background: url(update.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    
+}
+.under3 .space{
+    width: 10rem;
+
+}
+.under4 .source{
+    background: url(delivery.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+
+}
+.under4 .space{
+    width: 15rem;
+}
+
+.slider2, .slider3, .slider4{
+    display: none;
+}
+
+
+.marginlefthalf{
+    margin-left: 0.1%;
+}
+.marginrighthalf{
+    margin-right: 0.1%;
+}
+.activebar h1{
+    color: var(--main);
+}
+.bar:hover{
+    transform: scale(1.02);
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+/* fifth ends */
+/* sixth start */
+.headingsixth{
+    height: auto;
+    padding-top: 5rem;
+    width: 98.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    
+}
+.headingsixth h1{
+    font-size: 5rem;
+    color: var(--main);
+}
+.sixth{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 99vw;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.sixthinner{
+    display: flex;
+    width: 100rem;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding-top: 7.5rem;
+}
+.sixth .teammember, .teammember{
+    transform: translateX(-80.5rem);
+    margin: 0 1rem;
+    height: 30rem;
+    min-width: 85rem;
+    background: linear-gradient(45deg, var(--main), var(--secondary));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transition: 0.5s ease;
+    position: relative;
+}
+.teammember img{
+    position: absolute;
+    top: -7.5rem;
+    left: calc(50% - 7.5rem);
+    width: 15rem;
+    border-radius: 50%;
+    border: 0.2rem solid white;
+}
+.teammember .info .name h1{
+    color: white;
+    font-size: 2.5rem;
+}
+.teammember .info .text p{
+    color: white;
+}
+.teammember .info .text p a{
+    text-decoration: none;
+    color: var(--main);
+}
+.memberbtn{
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: calc(50% );
+
+}
+.prevmember{
+    left: 6rem;
+}
+.prevmember i{
+    color: var(--main);
+    font-size: 6rem;
+}
+.nextmember{
+    right: 6rem;
+}
+.nextmember i{
+    color: var(--secondary);
+    font-size: 6rem;
+}
+/* sixth ends */
+
+/* seventh stars */
+  .seventh{
+      height: auto;
+      width: 99vw;
+      /* background: linear-gradient(45deg, var(--main), var(--secondary)); */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .seventh h1{
+        font-size: 2.5rem;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        color: var(--main);
+    }
+    .seventh .seventhbody{
+        height: auto;
+        width: 92.5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+  .pricebar{
+      height: auto;
+      width: 100%;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, var(--main), var(--secondary));
+      transition: 0.4s ease;
+  }
+  .pricebar:hover{
+      transform: scale(1.09);
+  }
+  .pricebar h1{
+      height: auto;
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      color: var(--main);
+      margin: 1rem;
+  }
+  .pricebar ul{
+      font-size: 2.5rem;
+      list-style-type: none;
+      color: white;
+      margin: 2rem 0;
+  }
+
+  .pricebar ul li .fas{
+      margin-right: 1rem; 
+      font-size: 2.8rem;
+  }
+  .pricebar ul li .fa-check{
+      color: var(--main);
+  }
+  .pricebar ul li .fa-times{
+      color: red;
+      margin-right: 2rem;
+  }
+  .pricebar .price{
+      height: auto;
+      width: auto;
+      padding: 1rem 2rem;
+      color: var(--secondary);
+      font-size: 3rem;
+  }
+  .pricebar button{
+      height: auto;
+      width: auto;
+      border: none;
+      padding: 1rem 2rem;
+      color: var(--main);
+      background: var(--secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+  }
+  .pricebar button:hover{
+      transform: scale(1.10);
+  }
+  .pricebar:nth-child(5){
+    height: auto;
+    width: calc(200% + 2rem);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--main), var(--secondary));
+  }.pricebar:nth-child(5) button{
+      width: 60%;
+  }
+/* seventh ends */
+
+/* Eighth starts */
+.eighth{
+    width: 99vw;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.4s ease;
+}
+.question{
+    width: 92.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+    background: linear-gradient(45deg, var(--secondary), var(--main));
+    font-size: 1.25rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    color: white;
+    transition: 0.4s ease;
+}
+.answer{
+    display: none;
+    width: 92%;
+    height: auto;
+    padding: 2rem;
+    margin-top: 0;
+    background: rgba(128, 128, 128, 0.29);
+    transition: 0.4s ease;
+}
+.answer p{
+    font-size: 2.5rem;
+}
+.question i{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    transition: 0.4s ease;
+    border-radius: 50%;
+}
+.question i:hover{
+    padding: 1rem;
+    background: white;
+    color: var(--secondary);
+}
+/* Eighth Ends */
+
+/* footer starts */
+.footer{
+    margin: 5rem 0 0 0;
+    height: 45vh;
+    width: 99.2vw;
+    background: black;
+    position: relative;
+}
+.footerup{
+    width: 80%;
+    height: 9rem;
+    background: linear-gradient(45deg, var(--secondary), var(--main));
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 1rem;
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerup h1{
+    font-size: 4rem;
+}
+.footerup a{
+    padding: 1rem 2rem;
+    color: white;
+    width: auto;
+    height: auto;
+    background-color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+.footerup a i{
+    margin-left: 1rem;
+}
+.footerup a:hover{
+    background: linear-gradient(45deg, var(--main), var(--secondary));
+    transform: scale(1.10);
+}
+.footermain{
+    height: 100%;
+    width: 100%;
+    padding: 6rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footermain .brand{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 3rem;
+    padding-left: 6rem;
+    height: auto;
+}
+.footermain .brand img{
+    height: 3rem;
+    margin-right: 2rem;
+    width: 3rem;
+}
+.footermain .brand .brandname{
+color:white;
+font-size: 3rem;}
+.footermain .linksfooter{
+    height: 100%;
+    width: 100%;
+}
+/* footer ends  */
